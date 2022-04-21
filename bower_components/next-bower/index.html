@@ -1,0 +1,826 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>NeXt UI Framework - RARE/freeRtr documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#next-ui-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="RARE/freeRtr documentation" class="md-header__button md-logo" aria-label="RARE/freeRtr documentation" data-md-component="logo">
+      
+  <img src="../../img/rare-icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RARE/freeRtr documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NeXt UI Framework
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RARE/freeRtr documentation" class="md-nav__button md-logo" aria-label="RARE/freeRtr documentation" data-md-component="logo">
+      
+  <img src="../../img/rare-icon.png" alt="logo">
+
+    </a>
+    RARE/freeRtr documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Getting started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/getting-started/001-hello-world/" class="md-nav__link">
+        Hello freeRtr !
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/getting-started/002-topology-example/" class="md-nav__link">
+        Topology example
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/getting-started/003-unleash/" class="md-nav__link">
+        Unleash freeRtr !
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/getting-started/004-igp/" class="md-nav__link">
+        Intra domain routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/getting-started/005-mpls/" class="md-nav__link">
+        MPLS forwarding core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/getting-started/006-ibgp/" class="md-nav__link">
+        iBGP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          References
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="References" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/reference/" class="md-nav__link">
+        All features in one page
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/reference/tabbed/" class="md-nav__link">
+        Features category
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/installation/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Wedge100bf32
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Wedge100bf32" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Wedge100bf32
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/installation/wedge100bf32/onie-nos-install/" class="md-nav__link">
+        RARE NOS install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/installation/wedge100bf32/interface/" class="md-nav__link">
+        Interfaces configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contacts/" class="md-nav__link">
+        Contacts
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    Key Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    File structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    Quick start
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutorials-and-sample-code" class="md-nav__link">
+    Tutorials and Sample code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-instructions-from-source-code" class="md-nav__link">
+    Build instructions from source code
+  </a>
+  
+    <nav class="md-nav" aria-label="Build instructions from source code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-requirements" class="md-nav__link">
+    Environment requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-process" class="md-nav__link">
+    Build process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorized-devs-only-bower-updates" class="md-nav__link">
+    Authorized Devs Only: Bower Updates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whos-using-next" class="md-nav__link">
+    Who's Using NeXt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bugs" class="md-nav__link">
+    Bugs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team" class="md-nav__link">
+    Team
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="next-ui-framework">NeXt UI Framework<a class="headerlink" href="#next-ui-framework" title="Permanent link">&para;</a></h1>
+<p>NeXt UI toolkit is an HTML5/JavaScript based toolkit for network web application. It provides a network centric topology UI component featuring high performance and rich functionality. NeXt can display large complex network topologies, aggregated network nodes, traffic/path/tunnel/group visualizations and it includes different layout algorithms, map overlays, and preset user friendly interactions. NeXt can work together with DLUX to build ODL apps.</p>
+<p>Homepage : <a href="https://wiki.opendaylight.org/view/NeXt:Main">https://wiki.opendaylight.org/view/NeXt:Main</a></p>
+<p>UI Toolkit Quicklook : <a href="https://www.youtube.com/watch?v=gBsUDu8aucs">https://www.youtube.com/watch?v=gBsUDu8aucs</a></p>
+<p>Current version : 1.0.0</p>
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Large complex network topologies</li>
+<li>Aggregated network nodes</li>
+<li>Traffic/path/tunnel/group visualizations</li>
+<li>Different layout algorithms</li>
+<li>Map overlays</li>
+<li>Preset user-friendly interactions</li>
+</ul>
+<h2 id="file-structure">File structure<a class="headerlink" href="#file-structure" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>next/
+  |- css/
+  |  |- next.css // next stylesheet file
+  |  |- next.min.css // minimized stylesheet file
+  |  |- next-componentized.css
+  |  |- next-componentized.min.css
+  |- js
+  |  |- next.js // next js library
+  |  |- next.min.js // minimized js library
+  |- fonts/ // font resources foler
+  |  doc/ //APi manual
+  |- README.md
+</code></pre></div>
+</td></tr></table>
+<h2 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<p>1) Create a HTML file.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/next.css&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/next.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+    <span class="c1">//next code</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+<p>2) Edit next code</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Initialize a topology component</span>
+<span class="kd">var</span> <span class="nx">topo</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">nx</span><span class="p">.</span><span class="nx">graphic</span><span class="p">.</span><span class="nx">Topology</span><span class="p">({</span>
+<span class="p">});</span>
+
+<span class="c1">// Create new app</span>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">nx</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">Application</span><span class="p">();</span>
+
+<span class="c1">// Attach topo to app</span>
+<span class="nx">topo</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<p>3) Open html file with Chrome</p>
+<h3 id="tutorials-and-sample-code">Tutorials and Sample code<a class="headerlink" href="#tutorials-and-sample-code" title="Permanent link">&para;</a></h3>
+<p>Tutorials : <a href="https://wiki.opendaylight.org/view/NeXt:Main">https://wiki.opendaylight.org/view/NeXt:Main</a></p>
+<p>Opendaylight sample code intergrate DLUX with NeXt: <a href="https://github.com/CiscoDevNet/opendaylight-sample-apps">https://github.com/CiscoDevNet/opendaylight-sample-apps</a></p>
+<p>BIERMAN : <a href="https://github.com/zverevalexei/bierman-gui">https://github.com/zverevalexei/bierman-gui</a></p>
+<h2 id="build-instructions-from-source-code">Build instructions from source code<a class="headerlink" href="#build-instructions-from-source-code" title="Permanent link">&para;</a></h2>
+<p>Git :  <a href="https://git.opendaylight.org/gerrit/p/next">https://git.opendaylight.org/gerrit/p/next</a></p>
+<h3 id="environment-requirements">Environment requirements<a class="headerlink" href="#environment-requirements" title="Permanent link">&para;</a></h3>
+<p>In order to build NeXt from sources, you must have <a href="https://nodejs.org/">Node.js</a> installed. </p>
+<p>After that, make sure to have <a href="https://www.npmjs.com/package/grunt">Grunt</a> installed. To do so, run:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm install grunt
+</code></pre></div>
+</td></tr></table>
+<h3 id="build-process">Build process<a class="headerlink" href="#build-process" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>npm install</code> to install npm modules</li>
+<li><code>grunt</code> to build from sources</li>
+</ul>
+<h3 id="authorized-devs-only-bower-updates">Authorized Devs Only: Bower Updates<a class="headerlink" href="#authorized-devs-only-bower-updates" title="Permanent link">&para;</a></h3>
+<p>You should only update Bower if the build is stable, or a major issue has been fixed.</p>
+<p>To do so, type in the command line:</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>node update-bower.js -u {{GITHUB USERNAME}} -p {{GITHUB PASSWORD}} -v {{VERSION NUMBER}}
+</code></pre></div>
+</td></tr></table>
+Make sure to turn <code>{{GITHUB USERNAME}}</code>, <code>{{GITHUB PASSWORD}}</code> and <code>{{NEW VERSION}}</code> into appropriate values.</p>
+<p>Example: </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>node update-bower.js -u gituser -p 123456 -v 0.1.0
+</code></pre></div>
+</td></tr></table>
+<p>Leave the terminal window open until you see <code>Done!</code> message.</p>
+<h2 id="whos-using-next">Who's Using NeXt<a class="headerlink" href="#whos-using-next" title="Permanent link">&para;</a></h2>
+<p>Here we feature a few customers who choose NeXt framework as their topology visualization tool and use it in their products.</p>
+<ul>
+<li><a href="https://cisco.com/">Cisco</a></li>
+<li><a href="https://www.verizonwireless.com">Verizon</a></li>
+<li><a href="https://att.com">AT&amp;T</a></li>
+<li><a href="https://hpe.com">HP Enterprise</a></li>
+<li><a href="http://www.nts.eu/en/">NTS Netzwerk Telekom Service AG</a></li>
+</ul>
+<p>Are you <em>next</em>?</p>
+<h2 id="bugs">Bugs<a class="headerlink" href="#bugs" title="Permanent link">&para;</a></h2>
+<p><a href="https://bugs.opendaylight.org/buglist.cgi?bug_status=__open__&amp;product=next">Open Bugs</a></p>
+<h2 id="team">Team<a class="headerlink" href="#team" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Aikepaer Abuduweili (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#97;&#105;&#107;&#101;&#112;&#97;&#101;&#64;&#99;&#105;&#115;&#99;&#111;&#46;&#99;&#111;&#109;">&#97;&#97;&#105;&#107;&#101;&#112;&#97;&#101;&#64;&#99;&#105;&#115;&#99;&#111;&#46;&#99;&#111;&#109;</a>)</li>
+<li>Kang Li (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#107;&#97;&#110;&#103;&#50;&#64;&#99;&#105;&#115;&#99;&#111;&#46;&#99;&#111;&#109;">&#108;&#107;&#97;&#110;&#103;&#50;&#64;&#99;&#105;&#115;&#99;&#111;&#46;&#99;&#111;&#109;</a>)</li>
+<li>Alexei Zverev (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#122;&#118;&#101;&#114;&#101;&#118;&#64;&#99;&#105;&#115;&#99;&#111;&#46;&#99;&#111;&#109;">&#97;&#108;&#122;&#118;&#101;&#114;&#101;&#118;&#64;&#99;&#105;&#115;&#99;&#111;&#46;&#99;&#111;&#109;</a>)</li>
+<li>Xu Yangyang(<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#97;&#110;&#103;&#121;&#120;&#117;&#64;&#99;&#105;&#115;&#99;&#111;&#46;&#99;&#111;&#109;">&#121;&#97;&#110;&#103;&#121;&#120;&#117;&#64;&#99;&#105;&#115;&#99;&#111;&#46;&#99;&#111;&#109;</a>)</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>
