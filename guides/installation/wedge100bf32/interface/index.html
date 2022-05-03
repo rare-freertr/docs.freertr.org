@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interface-configuration-on-wedge100bf32" class="md-skip">
+        <a href="#interface-configuration-on-wedge-100bf-32" class="md-skip">
           Skip to content
         </a>
       
@@ -429,14 +429,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_2">
-          Wedge100bf32
+          Wedge 100BF-32
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Wedge100bf32" data-md-level="2">
+      <nav class="md-nav" aria-label="Wedge 100BF-32" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
-          Wedge100bf32
+          Wedge 100BF-32
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -473,6 +473,62 @@
         Interfaces configuration
       </a>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rare-nos-lcm-cli/" class="md-nav__link">
+        Software operation CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rare-nos-upgrade/" class="md-nav__link">
+        RARE NOS update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rare-nos-exp-upgrade/" class="md-nav__link">
+        RARE NOS experimental
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rare-nos-switch-profile/" class="md-nav__link">
+        RARE NOS switch profile
+      </a>
     </li>
   
 
@@ -567,7 +623,7 @@
               
                 
 
-<h1 id="interface-configuration-on-wedge100bf32"><strong>Interface configuration on Wedge100bf32</strong><a class="headerlink" href="#interface-configuration-on-wedge100bf32" title="Permanent link">&para;</a></h1>
+<h1 id="interface-configuration-on-wedge-100bf-32"><strong>Interface configuration on Wedge 100BF-32</strong><a class="headerlink" href="#interface-configuration-on-wedge-100bf-32" title="Permanent link">&para;</a></h1>
 <p>This section describes how to configure interface via RARE/freeRtr OS. Interfaces can be seen from 3 perspectives:</p>
 <ul>
 <li>Front panel</li>
@@ -581,13 +637,7 @@
 <p><code>FRONT PANEL 15/0, 15/1,15/2, 15/3</code>.</p>
 <h1 id="inteltofino-asic">INTEL/TOFINO ASIC<a class="headerlink" href="#inteltofino-asic" title="Permanent link">&para;</a></h1>
 <p>Internally, INTEL/TOFINO ASIC allocates to each interface (i.e <code>$PORT/$LANE</code> pair) a specific identifier. The output from <code>bf_shell</code> utility below shows an example of interface mapping.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>-----+----+---+----+-------+----+--+--+---+---+---+--------+----------------+----------------+-
+<div class="highlight"><pre><span></span><code>-----+----+---+----+-------+----+--+--+---+---+---+--------+----------------+----------------+-
 PORT |MAC |D_P|P/PT|SPEED  |FEC |AN|KR|RDY|ADM|OPR|LPBK    |FRAMES RX       |FRAMES TX       |E
 -----+----+---+----+-------+----+--+--+---+---+---+--------+----------------+----------------+-
 1/0  |23/0|132|3/ 4|10G    |NONE|Au|Au|YES|ENB|UP |  NONE  |           55055|           55154|
@@ -595,7 +645,6 @@ PORT |MAC |D_P|P/PT|SPEED  |FEC |AN|KR|RDY|ADM|OPR|LPBK    |FRAMES RX       |FRA
 1/2  |23/2|134|3/ 6|-------|----|--|--|YES|---|---|--------|----------------|----------------|-
 1/3  |23/3|135|3/ 7|-------|----|--|--|YES|---|---|--------|----------------|----------------|-
 </code></pre></div>
-</td></tr></table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The output above is just for information. Practically you would never have to run <code>bf_shell</code> in order to retrieve this mapping between front panel interface and TOFINO identifier</p>
@@ -611,60 +660,38 @@ PORT |MAC |D_P|P/PT|SPEED  |FEC |AN|KR|RDY|ADM|OPR|LPBK    |FRAMES RX       |FRA
 <p>In freeRtr philosophy, each interface belongs to either a <code>vrf</code> or a <code>bridge</code>. It is therefore mandatory:</p>
 <ul>
 <li>to configure a <code>vrf</code> or a <code>bridge</code>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>vrf definition &lt;MY_VRF&gt;
+<div class="highlight"><pre><span></span><code>vrf definition &lt;MY_VRF&gt;
  exit
 </code></pre></div>
-</td></tr></table>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>bridge &lt;BRIDGE_ID&gt;
+<div class="highlight"><pre><span></span><code>bridge &lt;BRIDGE_ID&gt;
  mac-learn
  exit
-</code></pre></div>
-</td></tr></table></li>
+</code></pre></div></li>
 <li>
 <p>and bind each of them to an interface.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conf t
+<div class="highlight"><pre><span></span><code>conf t
 interface sdn1
  vrf forwarding  &lt;MY_VRF_ID&gt;
  exit
 end
 </code></pre></div>
-</td></tr></table>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conf t
+<div class="highlight"><pre><span></span><code>conf t
 interface sdn2
  bridge-group &lt;MY_BRIDGE_ID&gt;
  exit
 end
-</code></pre></div>
-</td></tr></table></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Declare <code>vrf</code> or <code>bridge</code> and interfaces at the dataplane level
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>server p4lang &lt;SERVER_P4_ID&gt;
+<div class="highlight"><pre><span></span><code>server p4lang &lt;SERVER_P4_ID&gt;
  export-vrf &lt;MY_VRF_ID&gt; 1
  export-bridge &lt;MY_BRIDGE_ID&gt; 1
  export-port sdn1 132 100 0 0 0
  export-port sdn2 140 100 0 0 0
  exit
 end
-</code></pre></div>
-</td></tr></table></p>
+</code></pre></div></p>
 </li>
 </ul>
 <h1 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">&para;</a></h1>
@@ -709,20 +736,7 @@ end
 <li>2 possibilities:</li>
 </ul>
 <p><code>-1-</code> <code>show p4lang &lt;SERVER_P4_ID&gt;</code>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>FREERTR# show p4lang p4
+<div class="highlight"><pre><span></span><code>FREERTR# show p4lang p4
 ...
 front  name
 ...
@@ -737,18 +751,8 @@ front  name
 143    frontpanel-2/3
 ...
 </code></pre></div>
-</td></tr></table>
 <code>-2-</code> Use freeRtr configuration auto-completion
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conf t
+<div class="highlight"><pre><span></span><code>conf t
 FREERTR(cfg)#server p4lang p4
 FREERTR(cfg-server)#export-port sdn4 ?
   &lt;num&gt;           - port number
@@ -759,35 +763,10 @@ FREERTR(cfg-server)#export-port sdn4 ?
   frontpanel-1/3  - port number
 ...
 </code></pre></div>
-</td></tr></table>
 If <code>-2-</code> is used then <code>frontpanel-1/0</code> will be translated to its corresponding TOFINO identifier (i.e <code>132</code>).</p>
 </div>
 <p>The final configuration is:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conf t
+<div class="highlight"><pre><span></span><code>conf t
 !
 vrf definition my_vrf
  exit
@@ -813,7 +792,6 @@ server p4lang p4
 !
 end
 </code></pre></div>
-</td></tr></table>
 
               
             </article>
@@ -843,13 +821,13 @@ end
       
       
         
-        <a href="../../../../license/" class="md-footer__link md-footer__link--next" aria-label="Next: License" rel="next">
+        <a href="../rare-nos-lcm-cli/" class="md-footer__link md-footer__link--next" aria-label="Next: Software operation CLI" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              License
+              Software operation CLI
             </div>
           </div>
           <div class="md-footer__button md-icon">
