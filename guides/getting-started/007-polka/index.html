@@ -1,0 +1,2585 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Polka - RARE/freeRtr documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lets-enable-polka" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="RARE/freeRtr documentation" class="md-header__button md-logo" aria-label="RARE/freeRtr documentation" data-md-component="logo">
+      
+  <img src="../../../img/rare-icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RARE/freeRtr documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Polka
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="RARE/freeRtr documentation" class="md-nav__button md-logo" aria-label="RARE/freeRtr documentation" data-md-component="logo">
+      
+  <img src="../../../img/rare-icon.png" alt="logo">
+
+    </a>
+    RARE/freeRtr documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Getting started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001-hello-world/" class="md-nav__link">
+        Hello freeRtr !
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../002-topology-example/" class="md-nav__link">
+        Topology example
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../003-unleash/" class="md-nav__link">
+        Unleash freeRtr !
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../004-igp/" class="md-nav__link">
+        Intra domain routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../005-mpls/" class="md-nav__link">
+        MPLS forwarding core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../006-ibgp/" class="md-nav__link">
+        iBGP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Polka
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Polka
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1 Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-freertr-network-example" class="md-nav__link">
+    2 freeRtr network example
+  </a>
+  
+    <nav class="md-nav" aria-label="2 freeRtr network example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-diagram" class="md-nav__link">
+    2.1 Diagram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-diagram_1" class="md-nav__link">
+    2.1 Diagram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-core-nodes-configuration" class="md-nav__link">
+    2.2 Core Nodes configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Core Nodes configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-routers-r1-r2-r3-r4" class="md-nav__link">
+    2.2.1  routers r1, r2, r3, r4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-edge-nodes-routers-r5-r6" class="md-nav__link">
+    2.2.1  Edge-Nodes-Routers r5, r6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-verification" class="md-nav__link">
+    3 Verification
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-launch-all-nodes" class="md-nav__link">
+    3.1 Launch all nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    Or
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-access-by-telnet" class="md-nav__link">
+    3.2 Access by Telnet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-verifying-the-tunnel-is-working-on-router-r5" class="md-nav__link">
+    3.3 Verifying the tunnel is working on router r5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-testing-connectivity-between-r5-to-r6-using-polka" class="md-nav__link">
+    3.3 Testing connectivity between R5 to R6 using PolKA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-visualizing-route-table" class="md-nav__link">
+    3.4 Visualizing route table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-visualizing-polka-routeid" class="md-nav__link">
+    3.4 Visualizing PolKA routeid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-tested-on" class="md-nav__link">
+    3.5 Tested on
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conclusion" class="md-nav__link">
+    4 Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-references" class="md-nav__link">
+    5 References:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          References
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="References" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        All features in one page
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tabbed/" class="md-nav__link">
+        Features category
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Wedge 100BF-32
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Wedge 100BF-32" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Wedge 100BF-32
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/wedge100bf32/onie-nos-install/" class="md-nav__link">
+        RARE NOS install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/wedge100bf32/interface/" class="md-nav__link">
+        Interfaces configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/wedge100bf32/rare-nos-lcm-cli/" class="md-nav__link">
+        Software operation CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/wedge100bf32/rare-nos-upgrade/" class="md-nav__link">
+        RARE NOS update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/wedge100bf32/rare-nos-exp-upgrade/" class="md-nav__link">
+        RARE NOS experimental
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/wedge100bf32/rare-nos-switch-profile/" class="md-nav__link">
+        RARE NOS switch profile
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Recipes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recipes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Recipes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/vrf/" class="md-nav__link">
+        Bridge and VRF
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contacts/" class="md-nav__link">
+        Contacts
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1 Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-freertr-network-example" class="md-nav__link">
+    2 freeRtr network example
+  </a>
+  
+    <nav class="md-nav" aria-label="2 freeRtr network example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-diagram" class="md-nav__link">
+    2.1 Diagram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-diagram_1" class="md-nav__link">
+    2.1 Diagram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-core-nodes-configuration" class="md-nav__link">
+    2.2 Core Nodes configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Core Nodes configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-routers-r1-r2-r3-r4" class="md-nav__link">
+    2.2.1  routers r1, r2, r3, r4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-edge-nodes-routers-r5-r6" class="md-nav__link">
+    2.2.1  Edge-Nodes-Routers r5, r6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-verification" class="md-nav__link">
+    3 Verification
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-launch-all-nodes" class="md-nav__link">
+    3.1 Launch all nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    Or
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-access-by-telnet" class="md-nav__link">
+    3.2 Access by Telnet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-verifying-the-tunnel-is-working-on-router-r5" class="md-nav__link">
+    3.3 Verifying the tunnel is working on router r5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-testing-connectivity-between-r5-to-r6-using-polka" class="md-nav__link">
+    3.3 Testing connectivity between R5 to R6 using PolKA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-visualizing-route-table" class="md-nav__link">
+    3.4 Visualizing route table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-visualizing-polka-routeid" class="md-nav__link">
+    3.4 Visualizing PolKA routeid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-tested-on" class="md-nav__link">
+    3.5 Tested on
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conclusion" class="md-nav__link">
+    4 Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-references" class="md-nav__link">
+    5 References:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="lets-enable-polka"><strong>Let’s enable PolKA</strong><a class="headerlink" href="#lets-enable-polka" title="Permanent link">&para;</a></h1>
+<h2 id="1-overview">1 Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<p>Source routing (SR) is a prominent alternative to table-based routing for reducing the number of network states. In this approach, a source adds a route label in the packet header to provide deterministic paths for traffic engineering. The residue number system (RNS) is a promising way of executing fully stateless SR, in which forwarding decisions rely on a simple modulo operation over a route label. In this context, PolKA (Polynomial Key-based Architecture), explores binary polynomial arithmetic to propose a novel RNS-based SR. Herein, this tutorial shows how to enable PolKA in FreeRouter, create tunnels and migrate between different tunnels.</p>
+<h2 id="2-freertr-network-example">2 freeRtr network example<a class="headerlink" href="#2-freertr-network-example" title="Permanent link">&para;</a></h2>
+<h3 id="21-diagram">2.1 Diagram<a class="headerlink" href="#21-diagram" title="Permanent link">&para;</a></h3>
+<p>The demo implements a square topology:
+- core nodes are <code>r1</code>, <code>r2</code>, <code>r3</code>, <code>r4</code>
+- edge nodes are <code>r5</code>, <code>r6</code>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>r5----e3----r1----e1----r4
+            |            |
+            |            |
+            e2          e2
+            |            |
+            |            |
+r6----e3----r2----e1----r3
+</code></pre></div>
+</td></tr></table>
+This topology presents two paths between r5 and r6, which will be used to create PolKA tunnels:
+- A shortest path: <code>r1</code>- <code>r2</code>
+- A longest path: <code>r1</code>- <code>r2</code>-<code>r3</code>-<code>r4</code></p>
+<h3 id="21-diagram_1">2.1 Diagram<a class="headerlink" href="#21-diagram_1" title="Permanent link">&para;</a></h3>
+<h3 id="22-core-nodes-configuration">2.2 Core Nodes configuration<a class="headerlink" href="#22-core-nodes-configuration" title="Permanent link">&para;</a></h3>
+<h4 id="221-routers-r1-r2-r3-r4">2.2.1  <strong>routers</strong> <code>r1</code>, <code>r2</code>, <code>r3</code>, <code>r4</code><a class="headerlink" href="#221-routers-r1-r2-r3-r4" title="Permanent link">&para;</a></h4>
+<p><code>r1-hw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>int eth1 eth 0000.1111.0001 127.0.0.1 16011 127.0.0.1 16021
+int eth2 eth 0000.1111.0003 127.0.0.1 16013 127.0.0.1 16023
+int eth3 eth 0000.1111.0005 127.0.0.1 16015 127.0.0.1 16025
+tcp2vrf 2121 v1 23
+</code></pre></div>
+</td></tr></table>
+<p><code>r1-sw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>hostname R1
+!
+vrf definition v1
+ rd 1:1
+ exit
+!
+router lsrp4 1
+ vrf v1
+ router-id 10.1.1.1
+ segrout 20 1
+ redistribute connected
+ exit
+!
+router lsrp6 1
+ vrf v1
+ router-id 10.6.1.1
+ segrout 20 1
+ redistribute connected
+ exit
+!
+interface template1
+ no description
+ lldp enable
+ vrf forwarding v1
+ ipv4 address dynamic dynamic
+ polka enable 1 65536 20
+ mpls enable
+ router lsrp4 1 enable
+ shutdown
+ no log-link-change
+ exit
+!
+interface loopback0
+ description lo R1
+ vrf forwarding v1
+ ipv4 address 20.20.20.1 255.255.255.255
+ ipv6 address 2020::1 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet1
+ description R1@eth1 --&gt; R4@eth1
+ vrf forwarding v1
+ ipv4 address 1.1.1.1 255.255.255.252
+ ipv6 address 1111:1::1 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet2
+ description R1@eth2 --&gt; R2@eth3
+ vrf forwarding v1
+ ipv4 address 2.2.2.2 255.255.255.252
+ ipv6 address 2222::2 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet3
+ description R1@eth3 --&gt; R5@eth1
+ vrf forwarding v1
+ ipv4 address 11.11.11.2 255.255.255.252
+ ipv6 address 1111::2 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+server telnet tel
+ security protocol telnet
+ exec timeout 10000000
+ exec logging
+ exec colorize prompt
+ no exec authorization
+ no login authentication
+ login logging
+ vrf v1
+ exit
+!
+end
+</code></pre></div>
+</td></tr></table>
+<p><code>r2-hw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>int eth1 eth 0000.2222.0001 127.0.0.1 26011 127.0.0.1 26021
+int eth2 eth 0000.2222.0002 127.0.0.1 26012 127.0.0.1 26022
+int eth3 eth 0000.2222.0003 127.0.0.1 16023 127.0.0.1 16013
+tcp2vrf 2222 v1 23
+</code></pre></div>
+</td></tr></table>
+<p><code>r2-sw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>hostname R2
+!
+!
+vrf definition v1
+ rd 1:1
+ exit
+!
+router lsrp4 1
+ vrf v1
+ router-id 10.2.2.2
+ segrout 20 2
+ redistribute connected
+ exit
+!
+router lsrp6 1
+ vrf v1
+ router-id 10.6.2.2
+ segrout 20 2
+ redistribute connected
+ exit
+!
+interface template1
+ no description
+ lldp enable
+ vrf forwarding v1
+ ipv4 address dynamic dynamic
+ polka enable 2 65536 20
+ mpls enable
+ router lsrp4 1 enable
+ shutdown
+ no log-link-change
+ exit
+!
+interface loopback0
+ description lo R2
+ vrf forwarding v1
+ ipv4 address 20.20.20.2 255.255.255.255
+ ipv6 address 2020::2 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet1
+ description R2@eth1 --&gt; R6@eth1
+ vrf forwarding v1
+ ipv4 address 7.7.7.2 255.255.255.252
+ ipv6 address 7777::2 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet2
+ description R2@eth2 --&gt; R3eth1
+ vrf forwarding v1
+ ipv4 address 6.6.6.1 255.255.255.252
+ ipv6 address 6666::1 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet3
+ description R2@eth3 --&gt; R1@eth2
+ vrf forwarding v1
+ ipv4 address 2.2.2.1 255.255.255.252
+ ipv6 address 2222::1 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+server telnet tel
+ security protocol telnet
+ exec timeout 10000000
+ exec logging
+ exec colorize prompt
+ no exec authorization
+ no login authentication
+ login logging
+ vrf v1
+ exit
+!
+end
+</code></pre></div>
+</td></tr></table>
+<p><code>r3-hw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>int eth1 eth 0000.3333.0002 127.0.0.1 26022 127.0.0.1 26012
+int eth2 eth 0000.3333.0003 127.0.0.1 46023 127.0.0.1 46013
+tcp2vrf 2323 v1 23
+</code></pre></div>
+</td></tr></table>
+<p><code>r3-sw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>hostname R3
+!
+vrf definition v1
+ rd 1:1
+ exit
+!
+router lsrp4 1
+ vrf v1
+ router-id 10.3.3.3
+ segrout 20 3
+ redistribute connected
+ exit
+!
+router lsrp6 1
+ vrf v1
+ router-id 10.6.3.3
+ segrout 20 3
+ redistribute connected
+ exit
+!
+interface template1
+ no description
+ lldp enable
+ vrf forwarding v1
+ ipv4 address dynamic dynamic
+ polka enable 3 65536 20
+ mpls enable
+ router lsrp4 1 enable
+ shutdown
+ no log-link-change
+ exit
+!
+interface loopback0
+ description lo R3
+ vrf forwarding v1
+ ipv4 address 20.20.20.3 255.255.255.255
+ ipv6 address 2020::3 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet1
+ description R3@eth1 --&gt; R2@eth2
+ vrf forwarding v1
+ ipv4 address 6.6.6.2 255.255.255.252
+ ipv6 address 6666::2 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet2
+ description R3@eth2 --&gt; R4@eth2
+ vrf forwarding v1
+ ipv4 address 3.3.3.1 255.255.255.252
+ ipv6 address 3333::1 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+server telnet tel
+ security protocol telnet
+ exec timeout 10000000
+ exec logging
+ exec colorize prompt
+ no exec authorization
+ no login authentication
+ login logging
+ vrf v1
+ exit
+!
+end
+</code></pre></div>
+</td></tr></table>
+<p><code>r4-hw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>int eth1 eth 0000.4444.0001 127.0.0.1 16021 127.0.0.1 16011
+int eth2 eth 0000.4444.0003 127.0.0.1 46013 127.0.0.1 46023
+tcp2vrf 2424 v1 23
+</code></pre></div>
+</td></tr></table>
+<p><code>r4-sw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>hostname R4
+!
+vrf definition v1
+ rd 1:1
+ exit
+!
+router lsrp4 1
+ vrf v1
+ router-id 10.4.4.4
+ segrout 20 4
+ redistribute connected
+ exit
+!
+router lsrp6 1
+ vrf v1
+ router-id 10.6.4.4
+ segrout 20 4
+ redistribute connected
+ exit
+!
+interface template1
+ no description
+ lldp enable
+ vrf forwarding v1
+ ipv4 address dynamic dynamic
+ polka enable 4 65536 20
+ mpls enable
+ router lsrp4 1 enable
+ shutdown
+ no log-link-change
+ exit
+!
+interface loopback0
+ description lo R4
+ vrf forwarding v1
+ ipv4 address 20.20.20.4 255.255.255.255
+ ipv6 address 2020::4 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet1
+ description R4@eth1 --&gt; R1@eth1
+ vrf forwarding v1
+ ipv4 address 1.1.1.2 255.255.255.252
+ ipv6 address 1111:1::2 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet2
+ description R4@eth2 --&gt; R3@eth2
+ vrf forwarding v1
+ ipv4 address 3.3.3.2 255.255.255.252
+ ipv6 address 3333::2 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+server telnet tel
+ security protocol telnet
+ exec timeout 10000000
+ exec logging
+ exec colorize prompt
+ no exec authorization
+ no login authentication
+ login logging
+ vrf v1
+ exit
+!
+end
+</code></pre></div>
+</td></tr></table>
+<h4 id="221-edge-nodes-routers-r5-r6">2.2.1  <strong>Edge-Nodes-Routers</strong> <code>r5</code>, <code>r6</code><a class="headerlink" href="#221-edge-nodes-routers-r5-r6" title="Permanent link">&para;</a></h4>
+<p><code>r5-hw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>int eth1 eth 0000.1111.0001 127.0.0.1 16025 127.0.0.1 16015
+tcp2vrf 2525 v1 23
+</code></pre></div>
+</td></tr></table>
+<p><code>r5-sw.txt</code></p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>hostname R5
+!
+vrf definition v1
+ rd 1:1
+ exit
+!
+router lsrp4 1
+ vrf v1
+ router-id 10.11.11.11
+ segrout 20 11
+ redistribute connected
+ exit
+!
+router lsrp6 1
+ vrf v1
+ router-id 10.6.11.11
+ segrout 20 11
+ redistribute connected
+ exit
+!
+interface template1
+ no description
+ lldp enable
+ vrf forwarding v1
+ ipv4 address dynamic dynamic
+ polka enable 11 65536 20
+ mpls enable
+ router lsrp4 1 enable
+ shutdown
+ no log-link-change
+ exit
+!
+interface loopback0
+ description lo R5
+ vrf forwarding v1
+ ipv4 address 20.20.20.11 255.255.255.255
+ ipv6 address 2020::11 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet1
+ description R5@eth1 --&gt; R1@eth3
+ vrf forwarding v1
+ ipv4 address 11.11.11.1 255.255.255.252
+ ipv6 address 1111::1 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface tunnel1
+ description POLKA tunnel shortest ipv4 from R5 -&gt; R6
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 20.20.20.7
+ tunnel domain-name 20.20.20.1 20.20.20.2
+ tunnel mode polka
+ vrf forwarding v1
+ ipv4 address 30.30.30.1 255.255.255.252
+ no shutdown
+ no log-link-change
+ exit
+!
+interface tunnel2
+ description POLKA tunnel longuest ipv4 from R5 -&gt; R6
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 20.20.20.7
+ tunnel domain-name 20.20.20.1 20.20.20.4 20.20.20.3 20.20.20.2
+ tunnel mode polka
+ vrf forwarding v1
+ ipv4 address 40.40.40.1 255.255.255.252
+ no shutdown
+ no log-link-change
+ exit
+!
+interface tunnel3
+ description POLKA tunnel shortest ipv6 from R5 -&gt; R6
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 2020::7
+ tunnel domain-name 2020::1 2020::2
+ tunnel mode polka
+ vrf forwarding v1
+ ipv6 address 3030::1 ffff:ffff:ffff:ffff::
+ no shutdown
+ no log-link-change
+ exit
+!
+interface tunnel4
+ description POLKA tunnel longues ipv6 from R5 -&gt; R6
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 2020::7
+ tunnel domain-name 2020::1 2020::4 2020::3 2020::2
+ tunnel mode polka
+ vrf forwarding v1
+ ipv6 address 4040::1 ffff:ffff:ffff:ffff::
+ no shutdown
+ no log-link-change
+ exit
+!
+!
+server telnet tel
+ security protocol telnet
+ exec timeout 10000000
+ exec colorize prompt
+ exec logging
+ no exec authorization
+ no login authentication
+ login logging
+ vrf v1
+ exit
+!
+end
+</code></pre></div>
+</td></tr></table>
+<code>r6-hw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>int eth1 eth 0000.1717.0001 127.0.0.1 26021 127.0.0.1 26011
+tcp2vrf 2626 v1 23
+</code></pre></div>
+</td></tr></table>
+<p><code>r6-sw.txt</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>hostname R6
+!
+vrf definition v1
+ rd 1:1
+ exit
+!
+router lsrp4 1
+ vrf v1
+ router-id 10.7.7.7
+ segrout 20 7
+ redistribute connected
+ exit
+!
+router lsrp6 1
+ vrf v1
+ router-id 10.6.7.7
+ segrout 20 7
+ redistribute connected
+ exit
+!
+interface template1
+ no description
+ lldp enable
+ vrf forwarding v1
+ ipv4 address dynamic dynamic
+ polka enable 7 65536 20
+ mpls enable
+ router lsrp4 1 enable
+ shutdown
+ no log-link-change
+ exit
+!
+interface loopback0
+ description lo R6
+ vrf forwarding v1
+ ipv4 address 20.20.20.7 255.255.255.255
+ ipv6 address 2020::7 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface ethernet1
+ description R6@eth1 -&gt; R2@eth1
+ vrf forwarding v1
+ ipv4 address 7.7.7.1 255.255.255.252
+ ipv6 address 7777::1 ffff:ffff:ffff:ffff::
+ template template1
+ router lsrp6 1 enable
+ no shutdown
+ exit
+!
+interface tunnel1
+ description POLKA tunnel from R6 -&gt; R5
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 20.20.20.11
+ tunnel domain-name 20.20.20.2 20.20.20.1
+ tunnel mode polka
+ vrf forwarding v1
+ ipv4 address 30.30.30.2 255.255.255.252
+ no shutdown
+ no log-link-change
+ exit
+!
+interface tunnel2
+ description POLKA tunnel longuest ipv4 from R6 -&gt; R5
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 20.20.20.11
+ tunnel domain-name 20.20.20.2 20.20.20.3 20.20.20.4 20.20.20.1
+ tunnel mode polka
+ vrf forwarding v1
+ ipv4 address 40.40.40.2 255.255.255.252
+ no shutdown
+ no log-link-change
+ exit
+!
+interface tunnel3
+ description POLKA tunnel shortest ipv6 from R6 -&gt; R5
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 2020::11
+ tunnel domain-name 2020::2 2020::1
+ tunnel mode polka
+ vrf forwarding v1
+ ipv6 address 3030::2 ffff:ffff:ffff:ffff::
+ no shutdown
+ no log-link-change
+ exit
+!
+interface tunnel4
+ description POLKA tunnel longues ipv6 from R6 -&gt; R5
+ tunnel vrf v1
+ tunnel source loopback0
+ tunnel destination 2020::11
+ tunnel domain-name 2020::2 2020::3 2020::4 2020::1
+ tunnel mode polka
+ vrf forwarding v1
+ ipv6 address 4040::2 ffff:ffff:ffff:ffff::
+ no shutdown
+ no log-link-change
+ exit
+!
+server telnet tel
+ security protocol telnet
+ exec timeout 10000000
+ exec logging
+ exec colorize prompt
+ no exec authorization
+ no login authentication
+ login logging
+ vrf v1
+ exit
+!
+end
+</code></pre></div>
+</td></tr></table>
+<h2 id="3-verification">3 Verification<a class="headerlink" href="#3-verification" title="Permanent link">&para;</a></h2>
+<h3 id="31-launch-all-nodes">3.1 Launch all nodes<a class="headerlink" href="#31-launch-all-nodes" title="Permanent link">&para;</a></h3>
+<p>Run <code>r1</code>, <code>r2</code>, <code>r3</code>,<code>r4</code>, <code>r5</code>, <code>r6</code> in different terminal windows:</p>
+<ul>
+<li>
+<p><strong>Run</strong> <code>r1</code>
+<code>java -jar rtr.jar routersc r1-hw.txt r1-sw.txt</code></p>
+</li>
+<li>
+<p><strong>Run</strong> <code>r2</code>
+<code>java -jar rtr.jar routersc r2-hw.txt r2-sw.txt</code></p>
+</li>
+<li>
+<p><strong>Run</strong> <code>r3</code>
+<code>java -jar rtr.jar routersc r3-hw.txt r3-sw.txt</code></p>
+</li>
+<li>
+<p><strong>Run</strong> <code>r4</code>
+<code>java -jar rtr.jar routersc r4-hw.txt r4-sw.txt</code></p>
+</li>
+<li>
+<p><strong>Run</strong> <code>r5</code>
+<code>java -jar rtr.jar routersc r5-hw.txt r5-sw.txt</code></p>
+</li>
+<li>
+<p><strong>Run</strong> <code>r6</code>
+<code>java -jar rtr.jar routersc r6-hw.txt r6-sw.txt</code></p>
+</li>
+</ul>
+<h3 id="or">Or<a class="headerlink" href="#or" title="Permanent link">&para;</a></h3>
+<p>Use <code>tmux</code> to run the entire topology in a single window.
+To install it on a Linux Debian-based like Ubuntu, use <code>apt install -y tmux</code>.</p>
+<p>Create a file
+<code>vi start.sh</code>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>#!/bin/bash
+
+# Copyright [2019-2022] Universidade Federal do Espirito Santo
+#                       Instituto Federal do Espirito Santo
+#
+# Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+RTR=/&lt;path freertr&gt;/rtr.jar
+HWSW=/&lt;path configuration files&gt;/
+
+tmux new-session -d -s rare &#39;java -jar &#39;$RTR&#39; routersc &#39;$HWSW&#39;r1-hw.txt &#39;$HWSW&#39;r1-sw.txt&#39;
+tmux split-window -v -t 0 -p 50
+tmux send &#39;java -jar &#39;$RTR&#39; routersc &#39;$HWSW&#39;r2-hw.txt &#39;$HWSW&#39;r2-sw.txt&#39; ENTER;
+tmux split-window -h -t 0 -p 50
+tmux send &#39;java -jar &#39;$RTR&#39; routersc &#39;$HWSW&#39;r3-hw.txt &#39;$HWSW&#39;r3-sw.txt&#39; ENTER;
+tmux split-window -h -t 2 -p 50
+tmux send &#39;java -jar &#39;$RTR&#39; routersc &#39;$HWSW&#39;r4-hw.txt &#39;$HWSW&#39;r4-sw.txt&#39; ENTER;
+tmux split-window -v -t 0 -p 50
+tmux send &#39;java -jar &#39;$RTR&#39; routersc &#39;$HWSW&#39;r5-hw.txt &#39;$HWSW&#39;r5-sw.txt&#39; ENTER;
+tmux split-window -v -t 2 -p 50
+tmux send &#39;java -jar &#39;$RTR&#39; routersc &#39;$HWSW&#39;r6-hw.txt &#39;$HWSW&#39;r6-sw.txt&#39; ENTER;
+tmux select-layout tiled
+tmux a;
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="32-access-by-telnet">3.2 Access by Telnet<a class="headerlink" href="#32-access-by-telnet" title="Permanent link">&para;</a></h3>
+<p>To access routers by telnet use <code>telnet &lt;ip address&gt; &lt;port&gt;</code>.</p>
+<p>For Example:</p>
+<p><code>telnet 127.0.0.1 2525</code></p>
+<h3 id="33-verifying-the-tunnel-is-working-on-router-r5">3.3 Verifying the tunnel is working on router r5<a class="headerlink" href="#33-verifying-the-tunnel-is-working-on-router-r5" title="Permanent link">&para;</a></h3>
+<p><code>R5# Show interfaces summary</code></p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>interface  state  tx     rx     drop
+template1  admin  50     0      345
+loopback0  up     3273   0      0
+ethernet1  up     17231  32368  0
+ethernet2  up     5760   0      0
+tunnel1    up     330    0      0
+tunnel2    up     0      0      0
+tunnel3    up     460    0      0
+tunnel4    up     230    0      0
+</code></pre></div>
+</td></tr></table>
+If all tunnels are <code>up</code>, it's a good signal.</p>
+<p>For verification on router <code>R6</code>, just connect and set the commands above.</p>
+<h3 id="33-testing-connectivity-between-r5-to-r6-using-polka">3.3 Testing connectivity between <code>R5</code> to <code>R6</code> using PolKA<a class="headerlink" href="#33-testing-connectivity-between-r5-to-r6-using-polka" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Shortest Path tunnel1 ipv4</strong></li>
+</ul>
+<p><code>R5#ping 30.30.30.2 /vrf v1</code>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pinging 30.30.30.2, src=null, vrf=v1, cnt=5, len=64, tim=1000, gap=0, ttl=255, tos=0, sgt=0, flow=0, fill=0, sweep=false, multi=false, detail=false
+!!!!!
+result=100%, recv/sent/lost/err=5/5/0/0, rtt min/avg/max/sum=0/0/3/8, ttl min/avg/max=255/255/255, tos min/avg/max=0/0/0
+</code></pre></div>
+</td></tr></table>
+<img alt="Shortest Path" src="/img/upload_fc7ec37244d45d0fc56cf6e5477a1a47.png" /></p>
+<ul>
+<li><strong>Longest Path tunnel2 ipv4</strong></li>
+</ul>
+<p><code>R5#ping 40.40.40.2 /vrf v1</code>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pinging 40.40.40.2, src=null, vrf=v1, cnt=5, len=64, tim=1000, gap=0, ttl=255, tos=0, sgt=0, flow=0, fill=0, sweep=false, multi=false, detail=false
+!!!!!
+result=100%, recv/sent/lost/err=5/5/0/0, rtt min/avg/max/sum=3/4/6/23, ttl min/avg/max=255/255/255, tos min/avg/max=0/0/0
+</code></pre></div>
+</td></tr></table>
+<img alt="Longuest Path" src="/img/upload_964c33bf6e483c09d210eab98bcc59cc.png" /></p>
+<ul>
+<li><strong>Shortest Path tunnel3 ipv6</strong></li>
+</ul>
+<p><code>R5#ping 3030::2 /vrf v1</code>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pinging 3030::2, src=null, vrf=v1, cnt=5, len=64, tim=1000, gap=0, ttl=255, tos=0, sgt=0, flow=0, fill=0, sweep=false, multi=false, detail=false
+!!!!!
+result=100%, recv/sent/lost/err=5/5/0/0, rtt min/avg/max/sum=0/0/1/2, ttl min/avg/max=255/255/255, tos min/avg/max=0/0/0
+</code></pre></div>
+</td></tr></table>
+<img alt="Shortest Path" src="/img/upload_6eb53de9dc87aa3f4143a4183903573b.png" /></p>
+<ul>
+<li><strong>Longest Path tunnel4 ipv6</strong></li>
+</ul>
+<p><code>R5#ping 4040::2 /vrf v1</code></p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pinging 4040::2, src=null, vrf=v1, cnt=5, len=64, tim=1000, gap=0, ttl=255, tos=0, sgt=0, flow=0, fill=0, sweep=false, multi=false, detail=false
+!!!!!
+result=100%, recv/sent/lost/err=5/5/0/0, rtt min/avg/max/sum=0/0/0/2, ttl min/avg/max=255/255/255, tos min/avg/max=0/0/0
+</code></pre></div>
+</td></tr></table>
+<img alt="Longuest Path" src="/img/upload_c82ee2d30c8907e0ec60648e89cc10d0.png" /></p>
+<h3 id="34-visualizing-route-table">3.4 Visualizing route table<a class="headerlink" href="#34-visualizing-route-table" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Route table ipv4</strong></li>
+</ul>
+<p><code>R5#show ipv4 route v1</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>typ  prefix          metric  iface      hop         time
+C    0.0.0.0/32      0/0     ethernet2  null        00:15:39
+L    1.1.1.0/30      70/10   ethernet1  11.11.11.2  00:15:29
+L    2.2.2.0/30      70/10   ethernet1  11.11.11.2  00:15:29
+L    3.3.3.0/30      70/20   ethernet1  11.11.11.2  00:15:29
+L    6.6.6.0/30      70/20   ethernet1  11.11.11.2  00:15:29
+L    7.7.7.0/30      70/20   ethernet1  11.11.11.2  00:15:29
+C    11.11.11.0/30   0/0     ethernet1  null        00:15:40
+LOC  11.11.11.1/32   0/1     ethernet1  null        00:15:40
+L    20.20.20.1/32   70/10   ethernet1  11.11.11.2  00:15:29
+L    20.20.20.2/32   70/20   ethernet1  11.11.11.2  00:15:29
+L    20.20.20.3/32   70/30   ethernet1  11.11.11.2  00:15:29
+L    20.20.20.4/32   70/20   ethernet1  11.11.11.2  00:15:29
+L    20.20.20.7/32   70/30   ethernet1  11.11.11.2  00:15:29
+C    20.20.20.11/32  0/0     loopback0  null        00:15:42
+C    30.30.30.0/30   0/0     tunnel1    null        00:15:29
+LOC  30.30.30.1/32   0/1     tunnel1    null        00:15:29
+C    40.40.40.0/30   0/0     tunnel2    null        00:15:29
+LOC  40.40.40.1/32   0/1     tunnel2    null        00:15:29
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>Route table ipv6</strong></li>
+</ul>
+<p><code>R5#show ipv6 route v1</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>typ  prefix        metric  iface      hop      time
+C    1111::/64     0/0     ethernet1  null     00:18:17
+LOC  1111::1/128   0/1     ethernet1  null     00:18:17
+L    1111:1::/64   70/10   ethernet1  1111::2  00:18:05
+L    2020::1/128   70/10   ethernet1  1111::2  00:18:05
+L    2020::2/128   70/20   ethernet1  1111::2  00:18:05
+L    2020::3/128   70/30   ethernet1  1111::2  00:18:05
+L    2020::4/128   70/20   ethernet1  1111::2  00:18:05
+L    2020::7/128   70/30   ethernet1  1111::2  00:18:05
+C    2020::11/128  0/0     loopback0  null     00:18:19
+L    2222::/64     70/10   ethernet1  1111::2  00:18:05
+C    3030::/64     0/0     tunnel3    null     00:18:01
+LOC  3030::1/128   0/1     tunnel3    null     00:18:01
+L    3333::/64     70/20   ethernet1  1111::2  00:18:05
+C    4040::/64     0/0     tunnel4    null     00:18:01
+LOC  4040::1/128   0/1     tunnel4    null     00:18:01
+L    6666::/64     70/20   ethernet1  1111::2  00:18:05
+L    7777::/64     70/20   ethernet1  1111::2  00:18:05
+</code></pre></div>
+</td></tr></table>
+<h3 id="34-visualizing-polka-routeid">3.4 Visualizing PolKA routeid<a class="headerlink" href="#34-visualizing-polka-routeid" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Routeid Tunnel 1</strong></li>
+</ul>
+<p><code>R5#show polka routeid tunnel1</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>mode  routeid
+hex   00 00 00 00 00 00 00 00 00 00 1c 59 b8 b1 a4 ea
+poly  111000101100110111000101100011010010011101010
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><strong>Routeid Tunnel 2</strong></li>
+</ul>
+<p><code>R5#show polka routeid tunnel2</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>mode  routeid
+hex   00 00 00 00 00 00 41 3b fd 39 6d 38 a0 07 71 39
+poly  1000001001110111111110100111001011011010011100010100000000001110111000100111001
+</code></pre></div>
+</td></tr></table>
+<h3 id="35-tested-on">3.5 Tested on<a class="headerlink" href="#35-tested-on" title="Permanent link">&para;</a></h3>
+<p>These configurations have been tested on the following operating systems: MacOS Monterey 12.2 and Ubuntu 21.04</p>
+<h2 id="4-conclusion">4 Conclusion<a class="headerlink" href="#4-conclusion" title="Permanent link">&para;</a></h2>
+<p>This section demonstrated:</p>
+<ul>
+<li>How to launch many automated routers with bash script using tmux</li>
+<li>How to use a template interface on freertr</li>
+<li>How to enable PolKA in a square topology</li>
+<li>How to create PolKA tunnels</li>
+<li>How to verify connectivity</li>
+</ul>
+<p>You learned how to enable PolKA protocol using FreeRouter tunnels. You also learned how to use Link-state Routing Protocol (LSRP).</p>
+<h2 id="5-references">5 References:<a class="headerlink" href="#5-references" title="Permanent link">&para;</a></h2>
+<p><a href="https://ieeexplore.ieee.org/document/9165501">https://ieeexplore.ieee.org/document/9165501</a></p>
+<p><a href="https://github.com/nerds-ufes/polka">https://github.com/nerds-ufes/polka</a></p>
+<p><a href="http://www.freertr.net/">http://www.freertr.net/</a></p>
+<p><a href="https://github.com/eversonscherrer/freertr/tree/main/polKa">https://github.com/eversonscherrer/freertr/tree/main/polKa</a></p>
+<p><a href="https://github.com/eversonscherrer/dissector-polka">https://github.com/eversonscherrer/dissector-polka</a></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../006-ibgp/" class="md-footer__link md-footer__link--prev" aria-label="Previous: iBGP" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              iBGP
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../reference/" class="md-footer__link md-footer__link--next" aria-label="Next: All features in one page" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              All features in one page
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>
